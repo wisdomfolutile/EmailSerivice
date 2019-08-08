@@ -29,7 +29,7 @@ public class ControllerClass {
      @PostMapping("/send")
    public ResponseEntity sendEmail(@RequestBody Email emailRequest)throws MessagingException, IOException {
       emailSender.sendMail(emailRequest.getMailMessage(), emailRequest.getMailFrom(), emailRequest.getMailTo(), false);
-      return ResponseEntity.ok().body("success muther fucker");
+      return ResponseEntity.ok().body("successfully sent!!!");
    }
    private class Email{
         private String MailTo;
